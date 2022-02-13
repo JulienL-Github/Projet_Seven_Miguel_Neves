@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;900&display=swap');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+
+h1, h2,h3 {
+    font-size: 24px ;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+h2{
+    padding : 50px;
+}
+
+h3 {
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 12px ;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color:black;
+  }
+
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    z-index: 10;
+
+    ol {
+        padding:0;
+        display: flex;
+    }
+    li {
+        list-style-type: none;
+        padding: 0 10px;
+    }
+
+    li:hover {
+        font-weight: 700;
+    }
+}
+
+
+
+
+#seven {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 100vh;
+    }
+    svg {
+        position: absolute;
+        font-size: 15em;
+        font-weight: bold;
+        text-transform: uppercase;
+        top: 0;
+        left: 0;
+        animation-duration: 1s;
+        animation-name: seven;
+        animation-delay: 1s;
+    }
+
+    @keyframes seven {
+        from {
+            font-size: 15em;
+
+        }
+        85% {
+            font-size: 10em;
+        }
+      
+        to {
+            font-size: 15em;
+        }
+      }
+
+    rect {
+        fill:white;
+        opacity: 90%;
+        mask:url(#mask);
+    }
+    h1 {
+        position: absolute;
+        margin: auto;
+        padding-top: 180px;
+        animation-name: inner-left;
+        animation-duration: 2.3s;
+        opacity: 1;
+    }
+
+    @keyframes inner-left {
+        from {
+          opacity: 0;
+        }
+        
+        85%{
+            opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    
+}
+
+#partenaires{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3) url("images/Miguel\ Neves\ -\ Basejump\ with\ wingsuit.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    background-blend-mode:overlay;
+    
+    h2 {
+        color:white;
+    }
+
+    .partenaire {
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            color:white;
+        }
+
+        img {
+            width: 250px;
+            transition : 0.1s ease-out;
+        }
+
+        img:hover{
+            width: 500px
+        }
+      
+    }
+
+
+}
+
+#coaching {
+display: flex;
+flex-direction: column;
+padding : 0 0 50px 0;
+background-color: rgb(252, 252, 252);
+} 
+
+#coach-box {
+display: flex;
+align-items:center;
+justify-content: center;
+padding : 0 0 50px 0;
+    img{
+        height: 420px;
+        width: 250px;
+        object-fit: cover;
+    }
+}
+
+.box {
+    width: 33%;
+    padding: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-left: -50px;
+    z-index: 1;
+    background-color: white;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    padding: 25px 25px;
+    margin: 50px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    border-color: #013C69;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+button:hover {
+    background-color: #013C69;
+    box-shadow: 0px 15px 20px rgba(1, 60, 105, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.btn {
+display: flex;
+justify-content: center;
+}
+
+#second {
+    background-image: url("/images/Miguel\ Neves\ -\ Snowboard\ Coach\ -\ 2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+
+.citation h3 {
+    font-style: italic;
+    padding : 150px 50px 50px;
+    font-size : 24px;
+    font-weight: bold;
+}
+
+.profil-pics {
+    mask-image: url("/images/mask-image.png") ;
+    mask-size: 80% 80%;
+    mask-repeat: no-repeat;
+    transition: 0.3s;
+    }
+
+
+#coach-box:hover .profil-pics{
+    mask-size: 100% 100%
+}
+
+#reseauxSociaux {
+    width: 100%;
+    padding: 0 0 50px 0;
+    background-color: rgb(224, 224, 224);
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        
+        .button {
+            display : inline-block;
+            height: 60px;
+            width: 60px;
+            float: left;
+            margin: 0 5px;
+            background-color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+        }
+
+        .button:hover {
+            width: 200px;
+            }
+
+        .icon {
+            display : inline-block;
+            text-align: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            line-height: 60px;
+        }
+
+        .button:nth-child(1):hover .icon {
+            background-color: #166FE5 ;
+        }
+
+        .button:nth-child(2):hover .icon {
+            background-color: #D72B7E ;
+        }
+
+        .button:nth-child(3):hover .icon {
+            background-color: #FF0000 ;
+        }
+
+        .button:nth-child(4):hover .icon {
+            background-color: #31BA45 ;
+        }
+
+        i {
+            font-size: 25   px;
+            line-height: 60px;
+        }
+
+        .button:hover .icon i {
+            color:white;
+        }
+
+        span {
+            margin-left: 10px;
+            line-height: 60px;
+        }
+    }
+}
+
+.gototop {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    bottom: 40px;
+    right: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 28px;
+    transition: all .1s;
+
+    z-index: 10;
+    i{
+        color: white;
+        font-size: 15px;
+    }
+}
+
+.gototop:hover {
+    background: rgba(0, 0, 0, 0.50);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
+    i{
+        font-size: 22px;
+    }
+}
+
+
+#contact {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+@media (orientation: portrait) {
+
+
+    @keyframes seven {
+        from {
+            font-size: 5em;
+
+        }
+        75% {
+            font-size: 7em;
+        }
+      
+        to {
+            font-size: 5em;
+        }
+      }
+
+    #partenaires{
+        background-size: auto 100vh;
+    }
+
+    #coach-box {
+        flex-direction: column;
+        }
+
+    #coach-box:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .profil-pics {
+        margin-top: -50px;
+    }
+
+    .box {
+        width: 70%;
+        margin-left: 0;
+        margin-top: -100px;
+    }
+
+button {
+    padding: 20px 40px;
+    margin: 10px;
+}
+
+    #second {
+        background-size: auto 100vh;
+        clip-path: none;
+    }
+    #seven{
+        svg {
+            font-size: 5em;
+        }
+        img {
+            max-width: 100%;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 1em ;
+            padding-top: 100px;
+        }
+        
+    }
+
+    .gototop {
+        bottom: 10px;
+        right: 25px;
+    }
+
+}
