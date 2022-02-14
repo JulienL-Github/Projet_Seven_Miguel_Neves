@@ -73,6 +73,7 @@ nav li:hover {
 #seven {
   position: relative;
   width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +93,7 @@ nav li:hover {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 100vh;
+  max-height: 100%;
 }
 
 #seven svg {
@@ -233,6 +234,7 @@ nav li:hover {
 }
 
 #coaching {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,13 +313,14 @@ button:hover {
 }
 
 #second {
-  background-image: url("/images/Miguel Neves - Snowboard Coach - 2.jpg");
+  background-image: url("images/Miguel Neves - Snowboard Coach - 2.jpg");
   background-repeat: no-repeat;
   background-size: 100vw auto;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
   background-attachment: fixed;
   background-position: center;
+  width: 100%;
   height: 100vh;
 }
 
@@ -329,8 +332,8 @@ button:hover {
 }
 
 .profil-pics {
-  -webkit-mask-image: url("/images/mask-image.png");
-          mask-image: url("/images/mask-image.png");
+  -webkit-mask-image: url("images/mask-image.png");
+          mask-image: url("images/mask-image.png");
   -webkit-mask-size: 80% 80%;
           mask-size: 80% 80%;
   -webkit-mask-repeat: no-repeat;
