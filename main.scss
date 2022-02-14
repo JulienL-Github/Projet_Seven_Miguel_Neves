@@ -238,7 +238,7 @@ justify-content: center;
 }
 
 #second {
-    background-image: url("/images/Miguel\ Neves\ -\ Snowboard\ Coach\ -\ 2.jpg");
+    background-image: url("images/Miguel\ Neves\ -\ Snowboard\ Coach\ -\ 2.jpg");
     background-repeat: no-repeat;
     background-size: 100vw auto;
     clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -256,7 +256,7 @@ justify-content: center;
 }
 
 .profil-pics {
-    mask-image: url("/images/mask-image.png") ;
+    mask-image: url("images/mask-image.png") ;
     mask-size: 80% 80%;
     mask-repeat: no-repeat;
     transition: 0.3s;
