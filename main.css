@@ -231,6 +231,7 @@ nav li:hover {
 
 #partenaires .logo img:hover {
   width: 500px;
+  max-width: 100vw;
 }
 
 #coaching {
