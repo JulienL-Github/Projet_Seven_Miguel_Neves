@@ -45,19 +45,40 @@ a:visited {
   }
 
 nav {
-    position: absolute;
+    background-color: black;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content:center;
     z-index: 10;
 
+    .navBar{
+        display: flex;
+    }
+
+    .logoNav {
+        mask: url("images/Logo\ PUSH\ -\ Vectorial.svg") no-repeat center;
+        mask-size: 80px;
+        background-color: white;
+        width: 80px;
+        height: 20px;
+        margin-right: 10px;
+        }
+
     ol {
         padding:0;
         display: flex;
+        align-items:center;
     }
     li {
         list-style-type: none;
         padding: 0 10px;
+        a{
+            color: white;
+        }
+        a:visited {
+            color:white;
+          }
     }
 
     li:hover {
@@ -377,20 +398,37 @@ justify-content: center;
 
 @media (orientation: portrait) {
 
+nav {
+    .navBar{
+        flex-direction: column;
+    }
 
-    @keyframes seven {
-        from {
-            font-size: 5em;
+    ol {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    li {
+        list-style-type: none;
+        padding: 0 10px;
+        img {
+            height: 30px;
+        }
+    }
+}
 
-        }
-        75% {
-            font-size: 7em;
-        }
-      
-        to {
-            font-size: 5em;
-        }
-      }
+@keyframes seven {
+    from {
+        font-size: 5em;
+
+    }
+    75% {
+        font-size: 7em;
+    }
+    
+    to {
+        font-size: 5em;
+    }
+}
 
     #partenaires{
         background-size: auto 100vh;
@@ -442,5 +480,4 @@ button {
         bottom: 10px;
         right: 25px;
     }
-
 }

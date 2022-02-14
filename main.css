@@ -43,7 +43,8 @@ a:visited {
 }
 
 nav {
-  position: absolute;
+  background-color: black;
+  position: fixed;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,16 +55,44 @@ nav {
   z-index: 10;
 }
 
-nav ol {
-  padding: 0;
+nav .navBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+nav .logoNav {
+  -webkit-mask: url("images/Logo PUSH - Vectorial.svg") no-repeat center;
+          mask: url("images/Logo PUSH - Vectorial.svg") no-repeat center;
+  -webkit-mask-size: 80px;
+          mask-size: 80px;
+  background-color: white;
+  width: 80px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+nav ol {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 nav li {
   list-style-type: none;
   padding: 0 10px;
+}
+
+nav li a {
+  color: white;
+}
+
+nav li a:visited {
+  color: white;
 }
 
 nav li:hover {
@@ -462,6 +491,26 @@ button:hover {
 }
 
 @media (orientation: portrait) {
+  nav .navBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav ol {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  nav li {
+    list-style-type: none;
+    padding: 0 10px;
+  }
+  nav li img {
+    height: 30px;
+  }
   @-webkit-keyframes seven {
     from {
       font-size: 5em;
