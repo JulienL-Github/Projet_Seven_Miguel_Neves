@@ -1,203 +1,225 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;900&display=swap');
 
-html,body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    scroll-behavior: smooth;
+* {
+margin: 0;
+padding: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
 }
 
 
 h1, h2,h3 {
-    font-size: 24px ;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    color: black;
+font-size: 24px ;
+text-transform: uppercase;
+margin: 0;
+padding: 0;
+color: black;
 }
 
 h2{
-    padding : 50px;
+padding : 50px;
 }
 
 h3 {
-    font-size: 16px;
-    padding: 10px;
-    font-weight: 400;
+font-size: 16px;
+padding: 10px;
+font-weight: 400;
 }
 
 p {
-    font-size: 12px ;
+font-size: 12px ;
 }
 
 a {
-    color:black;
+color:black;
 }
 
 a:link {
-    text-decoration: none;
+text-decoration: none;
 }
 
 a:visited {
-    text-decoration: none;
-    color:black;
-  }
-
-nav {
-    background-color: black;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content:center;
-    z-index: 10;
-
-    .navBar{
-        display: flex;
-    }
-
-    .logoNav {
-        mask: url("images/Logo\ PUSH\ -\ Vectorial.svg") no-repeat center;
-        mask-size: 80px;
-        background-color: white;
-        width: 80px;
-        height: 20px;
-        margin-right: 10px;
-        }
-
-    ol {
-        padding:0;
-        display: flex;
-        align-items:center;
-    }
-    li {
-        list-style-type: none;
-        padding: 0 10px;
-        a{
-            color: white;
-        }
-        a:visited {
-            color:white;
-          }
-    }
-
-    li:hover {
-        font-weight: 700;
-    }
+text-decoration: none;
+color:black;
 }
 
 
+// WEB - NAVIGATION BAR //
+
+nav {
+height: 80px;
+width: 100%;
+background-color: white;
+position: fixed;
+z-index: 11;
+
+.logoNav {
+    mask: url("images/Logo\ PUSH\ -\ Vectorial.svg") no-repeat center;
+    mask-size: 80px;
+    background-color: black;
+    padding: 40px 100px;
+    line-height: 80px;
+    }
+
+ul {
+    position: relative;
+    float: right;
+    margin-right: 20px;
+
+    li {
+        display: inline-block;
+        line-height: 80px;
+        margin:5px;
+
+        a {
+            color : black;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 7px 13px;
+            border-radius: 3px;
+        }
+
+        a:hover,.active {
+            background: rgb(230, 230, 230);
+            transform: .5s;
+        }
+    }
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer;
+    display: none;
+}
+
+#check {
+    display:none;
+}
+}
+
+// --END-- //
 
 
 #introduction {
-    position: relative;
+position: relative;
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+img {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-        width: 100%;
-        object-fit: cover;
-        max-height: 100%;
-    }
-    svg {
-        position: absolute;
+    object-fit: cover;
+    max-height: 100%;
+}
+svg {
+    position: absolute;
+    font-size: 15em;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    animation-duration: 1s;
+    animation-name: introduction;
+    animation-delay: 1s;
+}
+
+@keyframes introduction {
+    from {
         font-size: 15em;
-        font-weight: bold;
-        text-transform: uppercase;
-        top: 0;
-        left: 0;
-        animation-duration: 1s;
-        animation-name: introduction;
-        animation-delay: 1s;
+
+    }
+    85% {
+        font-size: 10em;
+    }
+    
+    to {
+        font-size: 15em;
+    }
     }
 
-    @keyframes introduction {
-        from {
-            font-size: 15em;
+rect {
+    fill:white;
+    opacity: 90%;
+    mask:url(#mask);
+}
+h1 {
+    position: absolute;
+    margin: auto;
+    padding-top: 180px;
+    animation-name: inner-left;
+    animation-duration: 2.3s;
+    opacity: 1;
+}
 
-        }
-        85% {
-            font-size: 10em;
-        }
-      
-        to {
-            font-size: 15em;
-        }
-      }
-
-    rect {
-        fill:white;
-        opacity: 90%;
-        mask:url(#mask);
+@keyframes inner-left {
+    from {
+        opacity: 0;
     }
-    h1 {
-        position: absolute;
-        margin: auto;
-        padding-top: 180px;
-        animation-name: inner-left;
-        animation-duration: 2.3s;
+    
+    85%{
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
+    }
 
-    @keyframes inner-left {
-        from {
-          opacity: 0;
-        }
-        
-        85%{
-            opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-    
 }
 
 #partenaires{
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.3) url("images/Miguel\ Neves\ -\ Basejump\ with\ wingsuit.jpg");
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100vh;
-    background-blend-mode:overlay;
-    
-    h2 {
+width: 100%;
+height: 100vh;
+background: rgba(0, 0, 0, 0.3) url("images/Miguel\ Neves\ -\ Basejump\ with\ wingsuit.jpg");
+background-repeat: no-repeat;
+background-size: 100vw auto;
+background-attachment: fixed;
+background-position: center;
+height: 100vh;
+background-blend-mode:overlay;
+
+h2 {
+    color:white;
+}
+
+.partenaire {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
         color:white;
     }
 
-    .partenaire {
-        height: 60%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    img {
+        width: 250px;
+        transition : 0.1s ease-out;
     }
 
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h3 {
-            color:white;
-        }
-
-        img {
-            width: 250px;
-            transition : 0.1s ease-out;
-        }
-
-        img:hover{
-            width: 500px;
-            max-width: 100vw;
-        }
-      
+    img:hover{
+        width: 500px;
+        max-width: 100vw;
     }
+    
+}
 
 
 }
@@ -215,43 +237,43 @@ display: flex;
 align-items:center;
 justify-content: center;
 padding : 0 0 50px 0;
-    img{
-        height: 420px;
-        width: 250px;
-        object-fit: cover;
-    }
+img{
+    height: 420px;
+    width: 250px;
+    object-fit: cover;
+}
 }
 
 .box {
-    width: 33%;
-    padding: 25px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    margin-left: -50px;
-    z-index: 1;
-    background-color: white;
+width: 33%;
+padding: 25px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+margin-left: -50px;
+z-index: 1;
+background-color: white;
 }
 
 button {
-    font-family: 'Montserrat', sans-serif;
-    padding: 25px 25px;
-    margin: 50px;
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #000;
-    background-color: #fff;
-    border-color: #013C69;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+font-family: 'Montserrat', sans-serif;
+padding: 25px 25px;
+margin: 50px;
+font-size: 11px;
+text-transform: uppercase;
+color: #000;
+background-color: #fff;
+border-color: #013C69;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
 }
-  
+
 button:hover {
-    background-color: #013C69;
-    box-shadow: 0px 15px 20px rgba(1, 60, 105, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
+background-color: #013C69;
+box-shadow: 0px 15px 20px rgba(1, 60, 105, 0.4);
+color: #fff;
+transform: translateY(-7px);
 }
 
 .btn {
@@ -260,240 +282,264 @@ justify-content: center;
 }
 
 #second {
-    background-image: url("images/Miguel\ Neves\ -\ Snowboard\ Coach\ -\ 2.jpg");
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-    background-attachment: fixed;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
+background-image: url("images/Miguel\ Neves\ -\ Snowboard\ Coach\ -\ 2.jpg");
+background-repeat: no-repeat;
+background-size: 100vw auto;
+clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+background-attachment: fixed;
+background-position: center;
+width: 100%;
+height: 100vh;
 }
 
 .citation h3 {
-    font-style: italic;
-    padding : 150px 50px 50px;
-    font-size : 24px;
-    font-weight: bold;
+font-style: italic;
+padding : 150px 50px 50px;
+font-size : 24px;
+font-weight: bold;
 }
 
 .profil-pics {
-    mask-image: url("images/mask-image.png") ;
-    mask-size: 80% 80%;
-    mask-repeat: no-repeat;
-    transition: 0.3s;
-    }
+mask-image: url("images/mask-image.png") ;
+mask-size: 80% 80%;
+mask-repeat: no-repeat;
+transition: 0.3s;
+}
 
 
 #coach-box:hover .profil-pics{
-    mask-size: 100% 100%
+mask-size: 100% 100%
 }
 
 #reseauxSociaux {
-    width: 100%;
-    padding: 0 0 50px 0;
-    background-color: rgb(224, 224, 224);
+width: 100%;
+padding: 0 0 50px 0;
+background-color: rgb(224, 224, 224);
 
-    .container {
-        display: flex;
-        justify-content: space-evenly;
-        
-        .button {
-            display : inline-block;
-            height: 60px;
-            width: 60px;
-            float: left;
-            margin: 0 5px;
-            background-color: white;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: all .3s ease-in-out;
-        }
-
-        .button:hover {
-            width: 200px;
-            }
-
-        .icon {
-            display : inline-block;
-            text-align: center;
-            height: 60px;
-            width: 60px;
-            border-radius: 50px;
-            box-sizing: border-box;
-            line-height: 60px;
-        }
-
-        .button:nth-child(1):hover .icon {
-            background-color: #166FE5 ;
-        }
-
-        .button:nth-child(2):hover .icon {
-            background-color: #D72B7E ;
-        }
-
-        .button:nth-child(3):hover .icon {
-            background-color: #FF0000 ;
-        }
-
-        .button:nth-child(4):hover .icon {
-            background-color: #31BA45 ;
-        }
-
-        i {
-            font-size: 25   px;
-            line-height: 60px;
-        }
-
-        .button:hover .icon i {
-            color:white;
-        }
-
-        span {
-            margin-left: 10px;
-            line-height: 60px;
-        }
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    
+    .button {
+        display : inline-block;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 0 5px;
+        background-color: white;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all .3s ease-in-out;
     }
+
+    .button:hover {
+        width: 200px;
+        }
+
+    .icon {
+        display : inline-block;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 60px;
+    }
+
+    .button:nth-child(1):hover .icon {
+        background-color: #166FE5 ;
+    }
+
+    .button:nth-child(2):hover .icon {
+        background-color: #D72B7E ;
+    }
+
+    .button:nth-child(3):hover .icon {
+        background-color: #FF0000 ;
+    }
+
+    .button:nth-child(4):hover .icon {
+        background-color: #31BA45 ;
+    }
+
+    i {
+        font-size: 25   px;
+        line-height: 60px;
+    }
+
+    .button:hover .icon i {
+        color:white;
+    }
+
+    span {
+        margin-left: 10px;
+        line-height: 60px;
+    }
+}
 }
 
 .gototop {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    background: rgba(0, 0, 0, 0.1);
-    bottom: 40px;
-    right: 50px;
+position: fixed;
+width: 30px;
+height: 30px;
+background: rgba(0, 0, 0, 0.1);
+bottom: 40px;
+right: 50px;
 
-    text-decoration: none;
-    text-align: center;
-    line-height: 28px;
-    transition: all .1s;
+text-decoration: none;
+text-align: center;
+line-height: 28px;
+transition: all .1s;
 
-    z-index: 10;
-    i{
-        color: white;
-        font-size: 15px;
-    }
+z-index: 10;
+i{
+    color: white;
+    font-size: 15px;
+}
 }
 
 .gototop:hover {
-    background: rgba(0, 0, 0, 0.50);
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+background: rgba(0, 0, 0, 0.50);
+width: 50px;
+height: 50px;
+line-height: 50px;
 
-    i{
-        font-size: 22px;
-    }
+i{
+    font-size: 22px;
+}
 }
 
 
 #contact {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    height: 100vh;
+overflow-y: scroll;
+scroll-behavior: smooth;
+height: 100vh;
 }
 
 
 #titre {
-    padding: 100px 50px 50px 50px;
+padding: 100px 50px 50px 50px;
 }
 
+
+#calendly {
+    background-color: rgb(230, 230, 230);
+}
 .calendly-inline-widget {
-    height: 800px;
-    min-width: 320px;
+height: 800px;
+min-width: 320px;
 }
 
 @media (orientation: portrait) {
 
 nav {
-    .navBar{
-        flex-direction: column;
-    }
+z-index: 11;
+.checkbtn {
+    display: block;
+}
 
-    ol {
-        align-items: center;
-        flex-wrap: wrap;
-    }
+ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(230, 230, 230);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+
     li {
-        list-style-type: none;
-        padding: 0 10px;
-        img {
-            height: 30px;
+        display: block;
+        margin : 50px;
+        line-height: 30px;
+
+        a{
+            font-size: 20px;
+        }
+
+        a:hover {
+            background:none;
+            font-weight: 700;
         }
     }
 }
+
+#check:checked ~ ul {
+    left:0;
+}
+}    
+
 
 @keyframes introduction {
-    from {
-        font-size: 5em;
+from {
+    font-size: 5em;
 
-    }
-    75% {
-        font-size: 7em;
-    }
-    
-    to {
-        font-size: 5em;
-    }
+}
+75% {
+    font-size: 7em;
 }
 
-    #partenaires{
-        background-size: auto 100vh;
+to {
+    font-size: 5em;
+}
+}
+
+#partenaires{
+    background-size: auto 100vh;
+}
+
+#coach-box {
+    flex-direction: column;
     }
 
-    #coach-box {
-        flex-direction: column;
-        }
+#coach-box:nth-child(3) {
+    flex-direction: column-reverse;
+}
 
-    #coach-box:nth-child(3) {
-        flex-direction: column-reverse;
-    }
+.profil-pics {
+    margin-top: -50px;
+}
 
-    .profil-pics {
-        margin-top: -50px;
-    }
-
-    .box {
-        width: 70%;
-        margin-left: 0;
-        margin-top: -100px;
-    }
+.box {
+    width: 70%;
+    margin-left: 0;
+    margin-top: -100px;
+}
 
 button {
-    padding: 20px 40px;
-    margin: 10px;
+padding: 20px 40px;
+margin: 10px;
 }
 
-    #second {
-        background-size: auto 100vh;
-        clip-path: none;
+#second {
+    background-size: auto 100vh;
+    clip-path: none;
+}
+#introduction{
+    svg {
+        font-size: 5em;
     }
-    #introduction{
-        svg {
-            font-size: 5em;
-        }
-        img {
-            max-width: 100%;
-            height: 100vh;
-        }
-        h1 {
-            font-size: 1em ;
-            padding-top: 100px;
-        }
-        
+    img {
+        max-width: 100%;
+        height: 100vh;
     }
+    h1 {
+        font-size: 1em ;
+        padding-top: 100px;
+    }
+    
+}
 
-    .gototop {
-        bottom: 10px;
-        right: 25px;
-    }
+.gototop {
+    bottom: 10px;
+    right: 25px;
+}
 
-    .calendly-inline-widget {
-        margin-top: 0px;
-        margin-bottom: 20px;
-        height: 880px;
-    }
+.calendly-inline-widget {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    height: 880px;
+}
 }

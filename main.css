@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;900&display=swap");
-html, body {
+* {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -43,22 +50,11 @@ a:visited {
 }
 
 nav {
-  background-color: black;
-  position: fixed;
+  height: 80px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 10;
-}
-
-nav .navBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  background-color: white;
+  position: fixed;
+  z-index: 11;
 }
 
 nav .logoNav {
@@ -66,37 +62,49 @@ nav .logoNav {
           mask: url("images/Logo PUSH - Vectorial.svg") no-repeat center;
   -webkit-mask-size: 80px;
           mask-size: 80px;
-  background-color: white;
-  width: 80px;
-  height: 20px;
-  margin-right: 10px;
+  background-color: black;
+  padding: 40px 100px;
+  line-height: 80px;
 }
 
-nav ol {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+nav ul {
+  position: relative;
+  float: right;
+  margin-right: 20px;
 }
 
-nav li {
-  list-style-type: none;
-  padding: 0 10px;
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 5px;
 }
 
-nav li a {
-  color: white;
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
 }
 
-nav li a:visited {
-  color: white;
+nav ul li a:hover, nav ul li .active {
+  background: #e6e6e6;
+  -webkit-transform: .5s;
+          transform: .5s;
 }
 
-nav li:hover {
-  font-weight: 700;
+nav .checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+nav #check {
+  display: none;
 }
 
 #introduction {
@@ -494,31 +502,47 @@ button:hover {
   padding: 100px 50px 50px 50px;
 }
 
+#calendly {
+  background-color: #e6e6e6;
+}
+
 .calendly-inline-widget {
   height: 800px;
   min-width: 320px;
 }
 
 @media (orientation: portrait) {
-  nav .navBar {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  nav {
+    z-index: 11;
   }
-  nav ol {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  nav .checkbtn {
+    display: block;
   }
-  nav li {
-    list-style-type: none;
-    padding: 0 10px;
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #e6e6e6;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
   }
-  nav li img {
-    height: 30px;
+  nav ul li {
+    display: block;
+    margin: 50px;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav ul li a:hover {
+    background: none;
+    font-weight: 700;
+  }
+  nav #check:checked ~ ul {
+    left: 0;
   }
   @-webkit-keyframes introduction {
     from {

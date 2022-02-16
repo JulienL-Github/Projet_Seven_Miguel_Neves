@@ -29,21 +29,24 @@
 
 <!-- NAVIGATION BAR -->
 <nav>
-    <ol>
-        <a href="index.html"><div class="logoNav"></div></a>
-        <div class="navBar">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logoNav"></label>
+    <ul>
             <li><a href="index.html#partenaires">Partenaire</a></li>
-            <li><a href="calendrier.html">Contact</a></li>
-            <li><a href="index.html#reseauxSociaux">Reseaux Sociaux</a></li>
-        </div>
-    </ol>
+            <li><a class="active" href="calendrier.html">Contact</a></li>
+            <li><a href="#reseauxSociaux">Reseaux Sociaux</a></li>
+    </ul>
 </nav>
+<!-- END -->
 
 <!-- RESERVATION CALENDLY -->
 <section id="calendly">
     <h1 id="titre">Je vous rappelle !</h1>
     <div class="calendly-inline-widget" data-url="https://calendly.com/pamin33199/15min"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async defer></script>
 </section>
 
 
