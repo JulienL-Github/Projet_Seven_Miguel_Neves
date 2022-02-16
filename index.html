@@ -2,6 +2,7 @@
 
 <html lang="fr">
 <head>
+    <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,119 +26,132 @@
 </head>
 
 <body>
-    <nav>
-        <ol>
-            <div class="logoNav"></div>
-            <div class="navBar">
-                <li><a href="#partenaires">Partenaire</a></li>
-                <li><a href="#coaching">Coaching</a></li>
-                <li><a href="#reseauxSociaux">Reseaux Sociaux</a></li>
-            </div>
-        </ol>
-    </nav>
-    <section id="seven">
-        <img src="images/Miguel Neves - Snowboard Coach.jpg" alt="Snowboarder 01"> 
-        <svg height="100vh" width="100%">
-            <defs>
-                <mask id="mask" x="0" y="0" height="100%" width="100%">
-                    <rect x="0" y="0" height="100%" width="100%" />
-                    <text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">RIDE</text>
-                </mask>
-            </defs>
-            <rect x="0" y="0" height="100%" width="100%" />
-        </svg>
-        <h1>with Miguel Neves</h1>
-    </section>
-    <section id="partenaires">
-        <h2>Partenaire</h2>
-        <div class="partenaire">
-                <div class="logo">
-                    <a href="https://squirrel.ws/" target="_blank"><img src="https://squirrel.ws/img/logo.svg" alt="Snowboarder 02"></a>
-                    <a href="https://squirrel.ws/" target="_blank"><h3>Squirrel LCC - Wingsuits</h3></a>
-                </div>
 
-    </section>
-    <section id="coaching">
-        <div>
-            <h2>Coaching</h2>
+<!-- NAVIGATION BAR -->
+<nav>
+    <ol>
+        <a href="index.html"><div class="logoNav"></div></a>
+        <div class="navBar">
+            <li><a href="#partenaires">Partenaire</a></li>
+            <li><a href="calendrier.html">Contact</a></li>
+            <li><a href="#reseauxSociaux">Reseaux Sociaux</a></li>
         </div>
-        <div id="coach-box">
-            <div class="profil-pics">
-                <img src="images/FB_20170129_20_54_38_Saved_Picture.jpg" alt="Snowboarder"> 
+    </ol>
+</nav>
+
+<!-- INTRODUCTION -->
+<section id="introduction">
+    <img src="images/Miguel Neves - Snowboard Coach.jpg" alt="Snowboarder 01"> 
+    <svg height="100vh" width="100%">
+        <defs>
+            <mask id="mask" x="0" y="0" height="100%" width="100%">
+                <rect x="0" y="0" height="100%" width="100%" />
+                <text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">RIDE</text>
+            </mask>
+        </defs>
+        <rect x="0" y="0" height="100%" width="100%" />
+    </svg>
+    <h1>with Miguel Neves</h1>
+</section>
+
+<!-- PARTNERS -->
+<section id="partenaires">
+    <h2>Partenaire</h2>
+    <div class="partenaire">
+            <div class="logo">
+                <a href="https://squirrel.ws/" target="_blank"><img src="https://squirrel.ws/img/logo.svg" alt="Snowboarder 02"></a>
+                <a href="https://squirrel.ws/" target="_blank"><h3>Squirrel LCC - Wingsuits</h3></a>
             </div>
-            <div class="box">
-                <div class="box-text">
-                    <h1>Snowboard</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nihil exercitationem esse eos rerum alias id nesciunt, facilis nemo totam culpa enim, incidunt facere quibusdam vel perferendis odio pariatur ipsum.</p>
-                </div>
-                    <div class="btn">
-                    <button onclick="window.location.href='#contact'">Réserver un cours</button>
-                </div>
-            </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="coaching">
+    <div>
+        <h2>Coaching</h2>
+    </div>
+    <div id="coach-box">
+        <div class="profil-pics">
+            <img src="images/FB_20170129_20_54_38_Saved_Picture.jpg" alt="Snowboarder"> 
         </div>
-        <div id="coach-box">
-            <div class="box">
-                <div class="box-text">
-                    <h1>Basejump</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nihil exercitationem esse eos rerum alias id nesciunt, facilis nemo totam culpa enim, incidunt facere quibusdam vel perferendis odio pariatur ipsum.</p>
-                </div>
+        <div class="box">
+            <div class="box-text">
+                <h1>Snowboard</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nihil exercitationem esse eos rerum alias id nesciunt, facilis nemo totam culpa enim, incidunt facere quibusdam vel perferendis odio pariatur ipsum.</p>
+            </div>
                 <div class="btn">
-                    <button onclick="window.location.href='#contact'">Réserver un cours</button>
-                </div>
-            </div>
-            <div class="profil-pics">
-                <img src="images/Miguel Neves - Basejump with wingsuit 2.jpg" alt="wingsuit">
+                <button onclick="window.location.href='calendrier.html'">Plus d'informations</button>
             </div>
         </div>
-    </section>
+    </div>
+    <div id="coach-box">
+        <div class="box">
+            <div class="box-text">
+                <h1>Basejump</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nihil exercitationem esse eos rerum alias id nesciunt, facilis nemo totam culpa enim, incidunt facere quibusdam vel perferendis odio pariatur ipsum.</p>
+            </div>
+            <div class="btn">
+                <button onclick="window.location.href='calendrier.html'">Plus d'informations</button>
+            </div>
+        </div>
+        <div class="profil-pics">
+            <img src="images/Miguel Neves - Basejump with wingsuit 2.jpg" alt="wingsuit">
+        </div>
+    </div>
+</section>
 
-    <section id="second">
-        <div class='citation'>
-            <h3>"Les meilleurs snowboarders<br>ont tous commencés débutants"</h3>
-        </div>
-    </section>
+<!-- ABOUT MIGUEL -->
+<section id="second">
+    <div class='citation'>
+        <h3>"Les meilleurs snowboarders<br>ont tous commencés débutants"</h3>
+    </div>
+</section>
 
-    <section id="reseauxSociaux">
-        <div>
-            <h2>Mes réseaux</h2>
+
+<!-- SOCIAL MEDIA -->
+<section id="reseauxSociaux">
+    <div>
+        <h2>Mes réseaux</h2>
+    </div>
+    <div class="container">
+        <div class="button">
+        <a href="https://www.facebook.com/miguel.neves.10" target="blank">
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <span>Facebook</span>
+        </a>
         </div>
-        <div class="container">
-            <div class="button">
-            <a href="https://www.facebook.com/miguel.neves.10" target="blank">
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <span>Facebook</span>
-            </a>
+        <div class="button">
+        <a href="https://www.instagram.com/miguel_neves_pakito/" target="blank">
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
             </div>
-            <div class="button">
-            <a href="https://www.instagram.com/miguel_neves_pakito/" target="blank">
-                <div class="icon">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <span>Instagram</span>
-            </a>
-            </div>
-            <div class="button">
-            <a href="https://www.youtube.com/user/MIGUEL7NEVES/" target="blank">
-                <div class="icon">
-                    <i class="fab fa-youtube"></i>
-                </div>
-                <span>YouTube</span>
-            </a>
-            </div>
-            <div class="button">
-            <a href="https://chat.whatsapp.com/GDyYKu8LpHCFVzlRLS2LVP" target="blank">
-                <div class="icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <span>Whatsapp</span>
-            </a>
-            </div>
+            <span>Instagram</span>
+        </a>
         </div>
-    </section>
-    <a class="gototop" href="#">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+        <div class="button">
+        <a href="https://www.youtube.com/user/MIGUEL7NEVES/" target="blank">
+            <div class="icon">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <span>YouTube</span>
+        </a>
+        </div>
+        <div class="button">
+        <a href="https://chat.whatsapp.com/GDyYKu8LpHCFVzlRLS2LVP" target="blank">
+            <div class="icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <span>Whatsapp</span>
+        </a>
+        </div>
+    </div>
+</section>
+
+<!-- GO TO TOP ARROW -->
+<a class="gototop" href="#">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
 </body>
 </html>

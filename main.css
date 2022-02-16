@@ -99,7 +99,7 @@ nav li:hover {
   font-weight: 700;
 }
 
-#seven {
+#introduction {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -118,14 +118,14 @@ nav li:hover {
           align-items: center;
 }
 
-#seven img {
+#introduction img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   max-height: 100%;
 }
 
-#seven svg {
+#introduction svg {
   position: absolute;
   font-size: 15em;
   font-weight: bold;
@@ -134,13 +134,13 @@ nav li:hover {
   left: 0;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-name: seven;
-          animation-name: seven;
+  -webkit-animation-name: introduction;
+          animation-name: introduction;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-@-webkit-keyframes seven {
+@-webkit-keyframes introduction {
   from {
     font-size: 15em;
   }
@@ -152,7 +152,7 @@ nav li:hover {
   }
 }
 
-@keyframes seven {
+@keyframes introduction {
   from {
     font-size: 15em;
   }
@@ -164,14 +164,14 @@ nav li:hover {
   }
 }
 
-#seven rect {
+#introduction rect {
   fill: white;
   opacity: 90%;
   -webkit-mask: url(#mask);
           mask: url(#mask);
 }
 
-#seven h1 {
+#introduction h1 {
   position: absolute;
   margin: auto;
   padding-top: 180px;
@@ -490,6 +490,15 @@ button:hover {
   height: 100vh;
 }
 
+#titre {
+  padding: 100px 50px 50px 50px;
+}
+
+.calendly-inline-widget {
+  height: 800px;
+  min-width: 320px;
+}
+
 @media (orientation: portrait) {
   nav .navBar {
     -webkit-box-orient: vertical;
@@ -511,7 +520,7 @@ button:hover {
   nav li img {
     height: 30px;
   }
-  @-webkit-keyframes seven {
+  @-webkit-keyframes introduction {
     from {
       font-size: 5em;
     }
@@ -522,7 +531,7 @@ button:hover {
       font-size: 5em;
     }
   }
-  @keyframes seven {
+  @keyframes introduction {
     from {
       font-size: 5em;
     }
@@ -565,20 +574,25 @@ button:hover {
     -webkit-clip-path: none;
             clip-path: none;
   }
-  #seven svg {
+  #introduction svg {
     font-size: 5em;
   }
-  #seven img {
+  #introduction img {
     max-width: 100%;
     height: 100vh;
   }
-  #seven h1 {
+  #introduction h1 {
     font-size: 1em;
     padding-top: 100px;
   }
   .gototop {
     bottom: 10px;
     right: 25px;
+  }
+  .calendly-inline-widget {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    height: 880px;
   }
 }
 /*# sourceMappingURL=main.css.map */

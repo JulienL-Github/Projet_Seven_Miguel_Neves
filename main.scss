@@ -89,7 +89,7 @@ nav {
 
 
 
-#seven {
+#introduction {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -110,11 +110,11 @@ nav {
         top: 0;
         left: 0;
         animation-duration: 1s;
-        animation-name: seven;
+        animation-name: introduction;
         animation-delay: 1s;
     }
 
-    @keyframes seven {
+    @keyframes introduction {
         from {
             font-size: 15em;
 
@@ -396,6 +396,16 @@ justify-content: center;
     height: 100vh;
 }
 
+
+#titre {
+    padding: 100px 50px 50px 50px;
+}
+
+.calendly-inline-widget {
+    height: 800px;
+    min-width: 320px;
+}
+
 @media (orientation: portrait) {
 
 nav {
@@ -416,7 +426,7 @@ nav {
     }
 }
 
-@keyframes seven {
+@keyframes introduction {
     from {
         font-size: 5em;
 
@@ -461,7 +471,7 @@ button {
         background-size: auto 100vh;
         clip-path: none;
     }
-    #seven{
+    #introduction{
         svg {
             font-size: 5em;
         }
@@ -479,5 +489,11 @@ button {
     .gototop {
         bottom: 10px;
         right: 25px;
+    }
+
+    .calendly-inline-widget {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        height: 880px;
     }
 }
