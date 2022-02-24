@@ -507,7 +507,7 @@ button:hover {
 }
 
 .calendly-inline-widget {
-  height: 800px;
+  height: 1170px;
   min-width: 320px;
 }
 
@@ -614,9 +614,9 @@ button:hover {
     right: 25px;
   }
   .calendly-inline-widget {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    height: 880px;
+    width: 90%;
+    margin: auto;
+    height: 1380px;
   }
 }
 /*# sourceMappingURL=main.css.map */
