@@ -59,14 +59,19 @@ width: 100%;
 background-color: white;
 position: fixed;
 z-index: 11;
+display: flex;
+justify-content: space-between;
+padding: 0 50px;
 
-.logoNav {
-    mask: url("images/Logo\ PUSH\ -\ Vectorial.svg") no-repeat center;
-    mask-size: 80px;
-    background-color: black;
-    padding: 40px 100px;
-    line-height: 80px;
+#logoNav {
+    width: 150px;
+    margin: 20px 25px;
+
+    img {
+        width: 100%;
     }
+}
+
 
 ul {
     position: relative;
@@ -323,7 +328,7 @@ background-color: rgb(224, 224, 224);
     .button {
         display : inline-block;
         height: 60px;
-        width: 60px;
+        width: 200px;
         float: left;
         margin: 0 5px;
         background-color: white;
@@ -333,10 +338,6 @@ background-color: rgb(224, 224, 224);
         overflow: hidden;
         transition: all .3s ease-in-out;
     }
-
-    .button:hover {
-        width: 200px;
-        }
 
     .icon {
         display : inline-block;
@@ -432,10 +433,25 @@ height: 1170px;
 min-width: 320px;
 }
 
-@media (orientation: portrait) {
+@media only screen and (max-width: 1024px) {
+
+    #reseauxSociaux {
+        .container {
+            .button {
+                width: 60px;
+            }
+        }
+    }
+}
+
+
+@media (orientation: portrait) and (max-width: 768px) {
 
 nav {
 z-index: 11;
+display: block;
+padding: 0 0;
+
 .checkbtn {
     display: block;
 }
@@ -542,4 +558,7 @@ margin: 10px;
     margin: auto;
     height:1380px;
 }
+
+
+
 }

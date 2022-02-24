@@ -28,18 +28,25 @@
 <body>
 
 <!-- NAVIGATION BAR -->
-<nav>
+
+   <!--  <?php include('header.php'); ?> -->
+   
+   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
-    <label class="logoNav"></label>
-    <ul>
-            <li><a href="index.html#partenaires">Partenaire</a></li>
-            <li><a class="active" href="calendrier.html">Contact</a></li>
+    <!-- <a href="index.html"><label class="logoNav"></label></a> -->
+    <div id="logoNav"><a href="index.html"><img src="images/Logo PUSH - Vectorial.svg"></a></div>
+    <div id="rubrique">
+        <ul>
+            <li><a href="#partenaires">Partenaire</a></li>
+            <li><a href="calendrier.html">Contact</a></li>
             <li><a href="#reseauxSociaux">Reseaux Sociaux</a></li>
-    </ul>
+        </ul>
+    </div>
 </nav>
+
 <!-- END -->
 
 <!-- RESERVATION CALENDLY -->
@@ -92,6 +99,7 @@
         </div>
     </div>
 </section>
+<!-- END -->
 
 <!-- GO TO TOP ARROW -->
 <a class="gototop" href="#">
