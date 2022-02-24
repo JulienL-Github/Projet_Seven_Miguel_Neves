@@ -29,6 +29,7 @@
 
 <!-- NAVIGATION BAR -->
 <?php include('header.php'); ?>
+
 <!-- END -->
 
 <!-- INTRODUCTION -->
